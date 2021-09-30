@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[25pt, a0paper, landscape]{tikzposter}
+
+
+
+\usepackage{blindtext}
+\usepackage{comment}
+\usepackage{float}
+
+\usepackage{xcolor}
+
+\title{Voulez-vous (aha) - Take it now or leave it (aha)}
+\author{Gustav Robertson}
+\date{\today}
+\usetheme{Desert}
+
+
+\definecolor{uuRed}{HTML}{ac0000}
+
+\colorlet{blockbodybgcolor}{white}
+\colorlet{backgroundcolor}{gray}
+\colorlet{blocktitlefgcolor}{white}
+\colorlet{blocktitlebgcolor}{uuRed}
+
+\colorlet{titlebgcolor}{uuRed}
+
+\settitle{ \hspace*{5cm}\vbox{\@titlegraphic \\[\TP@titlegraphictotitledistance] \centering\color{titlefgcolor} {\bfseries \Huge \sc \@title \par}\vspace*{1em}{\huge \@author \par} \vspace*{1em} {\LARGE \@institute}}}
+
+\begin{document}
+
+
+\maketitle
+\begin{columns}
+    \column{.15}
+    \column{.85}
+        \block{Intro}{
+            \blindtext
+        }
+\end{columns}
+
+\begin{columns}
+    
+    \column{.15}
+    \column{.425}
+        \block{Preparations}{
+            \innerblock[]{The inner block}{\blindtext}
+            \blindtext
+         }
+        \block{Methodology}{
+            \blindtext
+        }
+        \note[
+        targetoffsetx=-8cm, 
+        targetoffsety=-8cm, 
+        width=0.3\linewidth
+        ]
+        {\textbf{Fission:}
+            Fission occurs when a neutron slams into a larger atom, forcing it to excite and spilt into two smaller atoms—also known as fission products. Additional neutrons are also released that can initiate a chain reaction. When each atom splits, a tremendous amount of energy is released.
+        }
+
+    \column{.425}
+        % \block{Generation of data}{
+        %     \centering
+        %     \includegraphics[width=.35\textwidth]{figures/sampling_sciantix.png}
+        % }
+        \block{Results}{
+            \blindtext
+            \\
+            \begin{center}
+                \includegraphics[scale=4]{figures/physics.jpg}
+            \end{center}
+        }
+        \note[
+        targetoffsetx=-9cm, 
+        targetoffsety=-15cm, 
+        width=0.3\linewidth
+        ]
+        {\textbf{Fusion:} Nuclear fusion is a reaction in which two or more atomic nuclei are combined to form one or more different atomic nuclei and subatomic particles (neutrons or protons). The difference in mass between the reactants and products is manifested as either the release or the absorption of energy. This difference in mass arises due to the difference in atomic binding energy between the nuclei before and after the reaction. Fusion is the process that powers active or main sequence stars and other high-magnitude stars, where large amounts of energy are released.:
+        }
+        
+        \block{Conclusions}{
+            Träutensilierna i ett tryckeri äro ingalunda en oviktig faktor, för trevnadens, ordningens och ekonomiens upprätthållande, och dock är det icke sällan som sorgliga erfarenheter göras på grund af det oförstånd med hvilket kaster, formbräden och regaler tillverkas och försäljas Kaster som äro dåligt hopkomna och af otillräckligt.\\
+        }
+        
+\end{columns}
+
+%The border 
+\node[above right,opacity=1,inner sep=0pt,outer sep=0pt] at (bottomleft) {\includegraphics[height=\paperheight]{logo/border_logo.png}};
+
+%The portrait 
+\node[above right,opacity=1,inner sep=0pt,outer sep=0pt] at (-56cm,-30cm) {\includegraphics[width=12cm]{figures/portrait.jpg}};
+
+%The white text in the corner
+\node[above right,text,outer sep=4cm, color=white, align=left] at (bottomleft) {Project work\\Deep learning 8hp\\Gustav Robertson\\gustav.robertson@physics.uu.se};
+
+use\end{document}
